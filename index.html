@@ -4,63 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prajwal T D | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f4f4f4;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
       color: #333;
     }
+
     header {
-      background: #0a66c2;
+      background: linear-gradient(135deg, #0a66c2, #004182);
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
-    section {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      margin-top: 20px;
-      border-radius: 8px;
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 40px;
     }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 35px 25px;
+      max-width: 1000px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
     h2 {
       color: #0a66c2;
+      margin-bottom: 20px;
     }
+
     ul {
       list-style: none;
       padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
     }
+
     ul li {
-      background: #eaeaea;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .projects div {
-      margin-bottom: 15px;
+      background: #f0f4ff;
       padding: 15px;
-      border-left: 4px solid #0a66c2;
-      background: #f9f9f9;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 500;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    ul li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 5px solid #0a66c2;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-      background: #222;
+      padding: 25px;
+      background: #0a66c2;
       color: #fff;
+      margin-top: 40px;
     }
+
     a {
       color: #0a66c2;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
+
+    a:hover { text-decoration: underline; }
+
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
-      }
+      header h1 { font-size: 28px; }
+      header p { font-size: 16px; }
     }
   </style>
 </head>
@@ -68,42 +113,45 @@
 
   <header>
     <h1>Prajwal T D</h1>
-    <p>Aspiring Web Developer | Computer Science Student</p>
+    <p>Web Developer | Computer Science Student</p>
   </header>
 
   <section>
     <h2>About Me</h2>
     <p>
-      I am a Computer Science student passionate about web development and building user-friendly applications.
-      I have hands-on experience with HTML, CSS, JavaScript, and software development fundamentals.
-      I enjoy learning new technologies and applying them to real-world projects.
+      I am a Computer Science student with a strong interest in front-end web development.
+      I enjoy creating clean, responsive, and user-friendly websites using modern web technologies.
+      I am continuously improving my skills and building real-world projects.
     </p>
   </section>
 
   <section>
     <h2>Skills</h2>
     <ul>
-      <li>HTML, CSS, JavaScript</li>
+      <li>HTML & CSS</li>
+      <li>JavaScript (Basics)</li>
       <li>Responsive Web Design</li>
       <li>Python & MySQL</li>
       <li>Power BI & Excel</li>
-      <li>Git & GitHub (Basics)</li>
+      <li>Git & GitHub</li>
     </ul>
   </section>
 
-  <section class="projects">
+  <section>
     <h2>Projects</h2>
-    <div>
-      <h3>Product Recommendation Agent</h3>
-      <p>Built a recommendation system using Python and machine learning concepts to provide personalized product suggestions.</p>
-    </div>
-    <div>
-      <h3>SQL Injection Prevention</h3>
-      <p>Implemented techniques to prevent malicious SQL injections and secure application data.</p>
-    </div>
-    <div>
-      <h3>Portfolio Website</h3>
-      <p>Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript.</p>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Product Recommendation Agent</h3>
+        <p>Developed a machine learning-based recommendation system using Python and NLP techniques.</p>
+      </div>
+      <div class="project-card">
+        <h3>SQL Injection Prevention</h3>
+        <p>Implemented security techniques to protect applications from SQL injection attacks.</p>
+      </div>
+      <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Designed and deployed a responsive portfolio website using HTML, CSS, and GitHub Pages.</p>
+      </div>
     </div>
   </section>
 
